@@ -1,0 +1,30 @@
+mysql:
+    image: mar2max/mysql-dev
+    ports:
+        - 127.0.0.1:3306:3306
+        - 8080:80
+    volumes:
+        - ./data/mysql:/var/lib/mysql
+
+#elasticsearch:
+#    image: mar2max/elasticsearch-dev
+#    ports:
+#        - 9200:9200
+
+#rabbitmq:
+#    image: mar2max/rabbitmq-dev
+#    ports:
+#        - 127.0.0.1:5672:5672
+#        - 15672:15672
+
+websrv:
+    image: mar2max/websrv
+    ports:
+        - 80:80
+        - 443:443
+    volumes:
+        - .:/vagrant
+    links:
+#        - elasticsearch:elasticsearch
+        - mysql:mysql
+#        - rabbitmq:rabbitmq
