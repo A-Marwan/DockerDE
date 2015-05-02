@@ -66,7 +66,7 @@ RUN chmod 755 /*.sh
 EXPOSE 80
 EXPOSE 443
 
-WORKDIR /DNA
+WORKDIR /SJN
 
 CMD ["/run.sh"]
 
