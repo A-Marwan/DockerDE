@@ -8,8 +8,8 @@
     Options FollowSymLinks
     AllowOverride All
   </Directory>
-  DocumentRoot /preMadeSEC/web
-  <Directory /preMadeSEC/web>
+  DocumentRoot /DNA/web
+  <Directory /DNA/web>
     Options Indexes FollowSymLinks MultiViews
     AllowOverride All
     Order allow,deny
