@@ -66,7 +66,7 @@ RUN chmod 755 /*.sh
 EXPOSE 80
 EXPOSE 443
 
-WORKDIR /preMadeSEC
+WORKDIR /DNA
 
 CMD ["/run.sh"]
 
