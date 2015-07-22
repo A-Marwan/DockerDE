@@ -8,11 +8,11 @@ RUN apt-get -y install apache2 php5 libapache2-mod-php5 php5-mysql zip
 
 WORKDIR /tmp
 
-RUN wget http://sourceforge.net/projects/phpmyadmin/files/phpMyAdmin/4.4.4/phpMyAdmin-4.4.4-all-languages.zip/download#!md5!151818e19ac8979406e5e820f0cb5c11 -O phpMyAdmin.zip
+RUN wget https://files.phpmyadmin.net/phpMyAdmin/4.4.12/phpMyAdmin-4.4.12-all-languages.zip -O phpMyAdmin.zip
 
 RUN rm -Rf /var/www/html && \
     unzip phpMyAdmin.zip && \
-    mv  phpMyAdmin-4.4.4-all-languages /var/www/html
+    mv  phpMyAdmin-4.4.12-all-languages /var/www/html
 
 ADD config.inc.php /var/www/html/
 
